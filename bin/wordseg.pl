@@ -1,4 +1,4 @@
-$!env perl
+#!env perl
 use warnings;
 use strict;
 use Lingua::ZH::WordSegmenter;
