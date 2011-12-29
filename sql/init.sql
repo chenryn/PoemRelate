@@ -1,0 +1,7 @@
+CREATE TABLE `poem` (
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `title` VARCHAR(128) NOT NULL,
+    `type` VARCHAR(32) NOT NULL,
+    `author` VARCHAR(32) NOT NULL,
+    `content` VARCHAR(1024) NOT NULL,
+);

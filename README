@@ -1,0 +1,7 @@
+INTRO:
+A web demo to recommand some new poems when the page show a metrical poetry.
+
+TODO:
+A template to show poem in the main frame and ajax the recommandation in the side frame.
+A spider/writer to insert thousands of hundreds of poems into databases.
+A mapreduce-sinter to sinter the keywords of poems after the new one being segmented.
