@@ -17,8 +17,6 @@ The algorithm I used to determine the vector of two poems is:
  Sort the number list and store the top ten in redis;
  Provide a random element to web model when we request the page which show one poem.
 
-=back
-
 =head1 TODO
 
 =over 2
