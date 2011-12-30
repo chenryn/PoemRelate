@@ -1,6 +1,18 @@
 NAME
        PoemRelate - A web demo to recommand relate poems when the page show a metrical poetry.
 
+PRINCIPLE
+       Store the poems in the mysql database, and store the vector of poems’ relation in the redis database.  So, We run the
+       offline script to spider poems from www, insert into mysql, compute and refresh relate vectors in redis.  And we access the
+       web site to get poem content from mysql and recommand another poem based on vector.  The algorithm I used to determine the
+       vector of two poems is:
+
+        Segment the poem and store a set in redis;
+        Traveral the database and get the intersection between the keyword set of the just poem and every stored poem's set;
+        Get the number of every set intersection;
+        Sort the number list and store the top ten in redis;
+        Provide a random element to web model when we request the page which show one poem.
+
 TODO
        1 A template to show poem in the main frame and ajax the recommandation in the side frame.
        2 A spider/writer to insert thousands of hundreds of poems into databases.
