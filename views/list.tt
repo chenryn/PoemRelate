@@ -1,0 +1,10 @@
+<% author %><br />
+<table>
+<% FOREACH item IN titles %>
+<tr>
+<% FOREACH title IN item %>
+<td>
+<a href="/poem/<% title.id %>"><% title.title %></a>
+</td><% END %>
+</tr><% END %>
+</table>
