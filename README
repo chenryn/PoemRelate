@@ -1,7 +1,57 @@
-INTRO:
-A web demo to recommand some new poems when the page show a metrical poetry.
+=pod
 
-TODO:
+=head1 NAME
+
+B<PoemRelate> - A web demo to recommand relate poems when the page show a metrical poetry.
+
+=head1 TODO
+
+=over 4
+
+=item 1
 A template to show poem in the main frame and ajax the recommandation in the side frame.
+
+=item 2
 A spider/writer to insert thousands of hundreds of poems into databases.
-A mapreduce-sinter to sinter the keywords of poems after the new one being segmented.
+
+=item 3
+A mapreducer to sinter the keywords of poems after the new one being segmented.
+
+=back
+
+=head1 DEPEND
+
+L<Dancer>, L<Redis>, L<DBD::mysql>, L<Template>, L<Lingua::ZH::WordSegmenter>, L<YAML>
+
+=head1 INSTALL
+
+=over 2
+
+=item 1
+Install the database server like mysql and redis.
+
+C<yum install -y mysql-server mysql-devel redis-server>
+
+=item 2
+Install the denpendencies for dancer framework and simplified chinese words segment.
+
+C<cpanm Dancer Template DBI DBD::mysql Redis YAML Lingua::ZH::WordSegmenter Dancer::Plugin::Database Dancer::Plugin::Redis>
+
+=item 3
+Run the standlone web server or any other you like.
+
+C<perl PoemRelate/bin/app.pl>
+
+=back
+
+=head1 AUTHOR
+
+C<(rao.chenlin@gmail.com) Jeff.Rao @ARGV>
+L<http://chenlinux.com/>
+
+=head1 COPYRIGHT
+
+Copyright (c) 2012, Jeff.Rao. All rights reserved.
+This program is free software; you may redistribute it and/or modify it under the same terms as Perl itself.
+
+=cut
