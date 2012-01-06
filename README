@@ -19,7 +19,7 @@ TODO
        3 A mapreducer to sinter the keywords of poems after the new one being segmented.
 
 DEPEND
-       Dancer, Redis, DBD::mysql, Template, Lingua::ZH::WordSegmenter, YAML
+       Dancer, Redis, DBD::mysql, Template, Lingua::ZH::WordSegmenter, YAML, Text::Extract::Word
 
 INSTALL
        1 Install the database server like mysql and redis.
@@ -27,7 +27,7 @@ INSTALL
 
        2 Install the denpendencies for dancer framework and simplified chinese words segment.
          "cpanm Dancer Template DBI DBD::mysql Redis YAML Lingua::ZH::WordSegmenter Dancer::Plugin::Database
-         Dancer::Plugin::Redis"
+         Dancer::Plugin::Redis Text::Extract::Word"
 
        3 Run the standlone web server or any other you like.
          "perl PoemRelate/bin/app.pl"

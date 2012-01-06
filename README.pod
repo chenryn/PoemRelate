@@ -34,7 +34,7 @@ A mapreducer to sinter the keywords of poems after the new one being segmented.
 
 =head1 DEPENDENCIES
 
-L<Dancer>, L<Redis>, L<DBD::mysql>, L<Template>, L<Lingua::ZH::WordSegmenter>, L<YAML>
+L<Dancer>, L<Redis>, L<DBD::mysql>, L<Template>, L<Lingua::ZH::WordSegmenter>, L<YAML>, L<Text::Extract::Word>
 
 =head1 INSTALL
 
@@ -48,7 +48,7 @@ C<yum install -y mysql-server mysql-devel redis-server>
 =item 2
 Install the denpendencies for dancer framework and simplified chinese words segment.
 
-C<cpanm Dancer Template DBI DBD::mysql Redis YAML Lingua::ZH::WordSegmenter Dancer::Plugin::Database Dancer::Plugin::Redis>
+C<cpanm Dancer Template DBI DBD::mysql Redis YAML Lingua::ZH::WordSegmenter Dancer::Plugin::Database Dancer::Plugin::Redis Text::Extract::Word>
 
 =item 3
 Run the standlone web server or any other you like.

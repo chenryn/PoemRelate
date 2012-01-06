@@ -13,6 +13,7 @@ WriteMakefile(
     PL_FILES            => {},
     PREREQ_PM => {
         'Test::More'                => 0,
+        'Text::Extract::Word'       => 0,
         'YAML'                      => 0,
         'Redis'                     => 0,
         'Lingua::ZH::WordSegmenter' => 0,

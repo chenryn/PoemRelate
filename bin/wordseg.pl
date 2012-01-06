@@ -28,9 +28,3 @@ foreach (1 .. $article_id - 1 ) {
     shift @relate if $#relate > 9;
     grep { $redis->sadd('relate:'.$article_id, $_->[0]) } @relate if $_ + 1 == $article_id;
 };
-
-#####Poem Out
-my $rand_id = $redis->srandmember('relate:'.$article_id);
-my $rand_sth = $dbh->prepare('select * from poem where id = ?');
-$rand_sth->execute($rand_id);
-my @rand_article = $rand_sth->fetchrow_array;
